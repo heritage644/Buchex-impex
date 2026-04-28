@@ -1,26 +1,203 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
+@source "../src";
+@source "..";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
+/* =========================================
+   THEME TOKENS
+========================================= */
 @theme inline {
+  /* Fonts */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-header: "Lobster", serif;
+
+  /* Radius */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  /* Color Mappings */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-yellow-primary: var(--yellow-primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-foreground: var(--whatsapp-foreground);
+
+  --color-dark: var(--dark);
+  --color-dark-foreground: var(--dark-foreground);
+
+  --color-cream: var(--cream);
+
+  /* Shadows */
+  --shadow-elegant: 0 20px 50px -20px color-mix(in oklab, var(--primary) 30%, transparent);
+  --shadow-soft: 0 10px 40px -10px oklch(0 0 0 / 0.12);
+  --shadow-card: 0 8px 24px -8px oklch(0 0 0 / 0.08);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* =========================================
+   LIGHT THEME
+========================================= */
+:root {
+  --radius: 0.625rem;
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.21 0.012 60);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.21 0.012 60);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.21 0.012 60);
+
+  --primary: oklch(0.605 0.155 47);
+  --yellow-primary: oklch(91.093% 0.1902 101.346);
+  --primary-foreground: oklch(1 0 0);
+  --primary-hover: oklch(0.555 0.155 47);
+
+  --secondary: oklch(0.96 0.012 60);
+  --secondary-foreground: oklch(0.21 0.012 60);
+
+  --muted: oklch(0.965 0.008 80);
+  --muted-foreground: oklch(0.55 0.014 257);
+
+  --accent: oklch(0.96 0.012 60);
+  --accent-foreground: oklch(0.21 0.012 60);
+
+  --destructive: oklch(0.577 0.245 27);
+  --destructive-foreground: oklch(0.984 0 0);
+
+  --border: oklch(0.91 0.008 255);
+  --input: oklch(0.91 0.008 255);
+  --ring: oklch(0.605 0.155 47);
+
+  --whatsapp: oklch(0.62 0.17 145);
+  --whatsapp-foreground: oklch(1 0 0);
+
+  --dark: oklch(0.18 0 0);
+  --dark-foreground: oklch(0.98 0 0);
+
+  --cream: oklch(0.975 0.012 80);
+}
+
+/* =========================================
+   DARK THEME
+========================================= */
+.dark {
+  --background: oklch(0.13 0 0);
+  --foreground: oklch(0.98 0 0);
+
+  --card: oklch(0.18 0 0);
+  --card-foreground: oklch(0.98 0 0);
+
+  --popover: oklch(0.18 0 0);
+  --popover-foreground: oklch(0.98 0 0);
+
+  --primary: oklch(0.65 0.155 47);
+  --primary-foreground: oklch(1 0 0);
+  --primary-hover: oklch(0.7 0.155 47);
+
+  --secondary: oklch(0.25 0.012 60);
+  --secondary-foreground: oklch(0.98 0 0);
+
+  --muted: oklch(0.25 0.012 60);
+  --muted-foreground: oklch(0.7 0.014 257);
+
+  --accent: oklch(0.25 0.012 60);
+  --accent-foreground: oklch(0.98 0 0);
+
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.65 0.155 47);
+}
+
+/* =========================================
+   BASE STYLES
+========================================= */
+@layer base {* {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* =========================================
+   UTILITIES
+========================================= */
+@layer utilities {
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+  }
+
+  .eyebrow::after {
+    content: "";
+    width: 2.5rem;
+    height: 3px;
+    background: var(--color-yellow-primary);
+    display: inline-block;
+  }
+
+  .container-x {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-x {
+      padding-inline: 2rem;
+    }
+  }
 }

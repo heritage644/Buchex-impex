@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import kitchen from "@/assets/kitchen-2.jpg";
-import staircase from "@/assets/staircase.jpg";
-import bathroom from "@/assets/bathroom.jpg";
 import Image from "next/image";
+
+
 
 export function AboutSection() {
   return (
@@ -42,12 +41,12 @@ export function AboutSection() {
           className="relative"
         >
           <div className="grid grid-cols-2  rounded-xl border gap-1  border-yellow-400 p-2">
-            <Image src={kitchen} alt="Marble kitchen" loading="lazy" className="rounded-xl 
+            <Image src="/kitchen.jpg" alt="Marble kitchen" fill loading="lazy" className="rounded-xl 
             shadow-card aspect-[1/2] h-full object-cover row-span-2" />
          <div className="flex flex-col gap-2   h-full">
-             <Image src={staircase} alt="Marble staircase" loading="lazy" className="rounded-xl 
+             <Image src="/staircase.jpg" alt="Marble staircase" fill loading="lazy" className="rounded-xl 
             shadow-card aspect-square object-cover h-full" />
-            <Image src={bathroom} alt="Marble bathroom" loading="lazy" className="rounded-xl 
+            <Image src="/bathroom.jpg" alt="Marble bathroom" fill loading="lazy" className="rounded-xl 
             shadow-card aspect-square object-cover h-full" />
          </div>
           </div>
