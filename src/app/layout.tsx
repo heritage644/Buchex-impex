@@ -1,6 +1,7 @@
 import { Inter, Poppins, Lobster } from "next/font/google";
 import "./globals.css";
-
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -28,7 +29,11 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${poppins.variable} ${lobster.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+        <Footer />
+        </body>
     </html>
   );
 }
