@@ -12,18 +12,13 @@ import Image from "next/image";
 
 
 const projects = [
-  { img: "/hero-kitchen.jpg", title: "Marble Kitchen Renovation", category: "Kitchen", location: "GRA, Enugu", date: "Mar 2026", desc: "Full Calacatta marble island and matching backsplash." },
-  { img: "/staircase-2.jpg", title: "Black Marble Grand Staircase", category: "Staircase", location: "Independence Layout", date: "Feb 2026", desc: "Dramatic black marble steps with glass railing." },
-  { img: "/countertop.jpg", title: "Polished Granite Countertop", category: "Countertop", location: "New Haven", date: "Feb 2026", desc: "Glossy black granite with mirror finish." },
-  { img: "/bathroom-2.jpg", title: "Luxury Master Bathroom", category: "Bathroom", location: "Trans-Ekulu", date: "Jan 2026", desc: "Wall-to-wall white marble with bronze fixtures." },
-  { img: "/staircase.jpg", title: "White Marble Stair Hall", category: "Staircase", location: "Achara Layout", date: "Jan 2026", desc: "Soft white marble with glass balustrade." },
-  { img: "/kitchen-2.jpg", title: "Modern Kitchen Island", category: "Kitchen", location: "Uwani", date: "Dec 2025", desc: "Quartz island in a minimalist dark kitchen." },
-  { img: "/wall-cladding.jpg", title: "Marble Feature Wall", category: "Cladding", location: "Ogui Road", date: "Dec 2025", desc: "Book-matched marble TV wall." },
-  { img: "/bathroom.jpg", title: "Floating Vanity Marble Top", category: "Bathroom", location: "Coal Camp", date: "Nov 2025", desc: "Custom floating vanity with round mirror." },
-  { img: "/hero-kitchen.jpg", title: "Hotel Lobby Granite Floor", category: "Commercial", location: "Independence Layout", date: "Oct 2025", desc: "Large-format granite tiles for hotel lobby." },
-  { img: "/staircase-2.jpg", title: "Office Reception Stairs", category: "Commercial", location: "Ogui Road", date: "Oct 2025", desc: "Granite steps with brass nosing." },
-  { img: "/kitchen-2.jpg", title: "Restaurant Bar Counter", category: "Commercial", location: "GRA, Enugu", date: "Sep 2025", desc: "12m granite bar in a fine-dining restaurant." },
-  { img: "/countertop.jpg", title: "Outdoor Stone Patio", category: "Outdoor", location: "Trans-Ekulu", date: "Aug 2025", desc: "Weather-grade granite patio installation." },
+  { img: "/kitchen-project.png", title: "Marble Kitchen Renovation", category: "Kitchen", location: "GRA, Enugu", date: "Mar 2026", desc: "Full Calacatta marble island and matching backsplash." },
+  { img: "/grave-stone.png", title: "Black Marble Grand Staircase", category: "Tomb stone", location: "Independence Layout", date: "Feb 2026", desc: "Dramatic black marble steps with glass railing." },
+  { img: "/kitchen-wall.png", title: "Polished Granite Countertop", category: "KitchenTop", location: "New Haven", date: "Feb 2026", desc: "Glossy black granite with mirror finish." },
+  { img: "/podium.png", title: "Luxury Master Bathroom", category: "Podium", location: "Trans-Ekulu", date: "Jan 2026", desc: "Wall-to-wall white marble with bronze fixtures." },
+  { img: "/table.png", title: "White Marble Stair Hall", category: "Marble Table", location: "Achara Layout", date: "Jan 2026", desc: "Soft white marble with glass balustrade." },
+  { img: "/marble-slab.png", title: "Modern Kitchen Island", category: "Slab", location: "Uwani", date: "Dec 2025", desc: "Quartz island in a minimalist dark kitchen." },
+  
 ];
 
 export default function ProjectsPage() {

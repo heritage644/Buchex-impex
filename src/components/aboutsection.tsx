@@ -40,16 +40,61 @@ export function AboutSection() {
           transition={{ duration: 0.7 }}
           className="relative"
         >
-          <div className="grid grid-cols-2  rounded-xl border gap-1  border-yellow-400 p-2">
-            <Image src="/kitchen.jpg" alt="Marble kitchen" fill loading="lazy" className="rounded-xl 
-            shadow-card aspect-[1/2] h-full object-cover row-span-2" />
-         <div className="flex flex-col gap-2   h-full">
-             <Image src="/staircase.jpg" alt="Marble staircase" fill loading="lazy" className="rounded-xl 
-            shadow-card aspect-square object-cover h-full" />
-            <Image src="/bathroom.jpg" alt="Marble bathroom" fill loading="lazy" className="rounded-xl 
-            shadow-card aspect-square object-cover h-full" />
-         </div>
-          </div>
+         <div className="grid grid-cols-2 rounded-xl border gap-2 h-[500px] border-yellow-400 p-2">
+
+
+      <div className="absolute -top-7 right-26 grid grid-cols-14 gap-2 opacity-30">
+    {Array.from({ length: 42 }).map((_, i) => (
+      <div key={i} className="w-1 h-1 bg-yellow-400 rounded-full"></div>
+    ))}
+  </div>
+  <div className="absolute -bottom-7 right-24 grid grid-cols-14 gap-2 ">
+    {Array.from({ length: 42 }).map((_, i) => (
+      <div key={i} className="w-1 h-1 bg-yellow-500 opacity-30 rounded-full"></div>
+    ))}
+  </div>
+    <div className="absolute bottom-40 -right-7 grid grid-cols-3 gap-2 ">
+    {Array.from({ length: 40 }).map((_, i) => (
+      <div key={i} className="w-1 h-1 bg-yellow-500 opacity-30 rounded-full"></div>
+    ))}
+  </div>
+  {/* LEFT BIG IMAGE */}
+  <div className="relative row-span-2">
+    <Image
+      src="/kitchen-2.jpg"
+      alt="Marble kitchen"
+      fill
+      loading="lazy"
+      className="rounded-xl shadow-card object-cover"
+    />
+  </div>
+
+  {/* RIGHT COLUMN */}
+  <div className="flex flex-col h-[475px]  gap-3">
+    
+    <div className="relative h-full ">
+      <Image
+        src="/staircase.jpg"
+        alt="Marble staircase"
+        fill
+        loading="lazy"
+        className="rounded-xl h-full shadow-card object-cover"
+      />
+    </div>
+
+    <div className="relative  h-full ">
+      <Image
+        src="/bathroom.jpg"
+        alt="Marble bathroom"
+        fill
+        loading="lazy"
+        className="rounded-xl h-full shadow-card object-cover"
+      />
+    </div>
+
+  </div>
+
+</div>
 
           <div className="absolute -bottom-5 -left-5 bg-yellow-500 text-primary-foreground w-25 rounded-2xl px-3 py-5 shadow-elegant">
             <div className="text-3xl font-bold font-display text-center leading-none">10+</div>

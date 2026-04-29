@@ -9,9 +9,8 @@ import { SectionHeading } from "../../components/sectionHEading";
 
 
 const team = [
-  { name: "Chinedu Okeke", role: "Project Manager", initials: "CO" },
-  { name: "Ifeanyi Nwosu", role: "Lead Installer", initials: "IN" },
-  { name: "Adaeze Eze", role: "Interior Consultant", initials: "AE" },
+  { name: "Uche Odii", role: "CEO", initials: "UO" },
+ 
 ];
 
 export default function AboutPage() {
@@ -59,10 +58,10 @@ export default function AboutPage() {
 
       <section className="py-20 md:py-28">
         <div className="container-x">
-          <SectionHeading center eyebrow="Our Team" title="Meet the Craftsmen" description="A small, dedicated team obsessed with detail." />
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <SectionHeading center eyebrow="Our Ceo" title="Meet the Craftsman"  />
+          <div className="mt-12 grid gap-6  items-center justify-center  ">
             {team.map((m) => (
-              <div key={m.name} className="bg-white rounded-2xl p-8 text-center shadow-card hover:shadow-elegant transition-shadow">
+              <div key={m.name} className="bg-white rounded-2xl px-28 py-10 text-center shadow-card hover:shadow-elegant transition-shadow">
                 <div className="mx-auto h-24 w-24 rounded-full bg-gradient-to-br from-primary to-primary-hover text-primary-foreground flex items-center justify-center text-2xl font-bold font-display">
                   {m.initials}
                 </div>
