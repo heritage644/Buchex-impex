@@ -60,12 +60,9 @@ export default function ContactPage() {
       <section className="pb-20">
         <div className="container-x">
           <div className="rounded-2xl overflow-hidden shadow-card aspect-[16/7] bg-cream relative">
-            <iframe
-              title="Map"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=7.49%2C6.42%2C7.51%2C6.44&layer=mapnik"
-              className="h-full w-full border-0"
-              loading="lazy"
-            />
+          <iframe   
+              loading="lazy" className="h-full w-full border-0"  title="Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.81032102773!2d7.4968184781256975!3d6.4184128769995645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1044a16aecadc655%3A0x96aa11887c61d3fc!2s72%2C%2073%20Kenyatta%20St%2C%20Uwani%2C%20Enugu%20400105%2C%20Enugu!5e0!3m2!1sen!2sng!4v1777461927083!5m2!1sen!2sng" width="600" height="450"   referrerPolicy="no-referrer-when-downgrade"></iframe>
+            
           </div>
         </div>
       </section>
