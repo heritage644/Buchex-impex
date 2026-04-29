@@ -13,11 +13,11 @@ import Image from "next/image";
 
 const projects = [
   { img: "/kitchen-project.png", title: "Marble Kitchen Renovation", category: "Kitchen", location: "GRA, Enugu", date: "Mar 2026", desc: "Full Calacatta marble island and matching backsplash." },
-  { img: "/grave-stone.png", title: "Black Marble Grand Staircase", category: "Tomb stone", location: "Independence Layout", date: "Feb 2026", desc: "Well designed and customized tomb stone." },
+  { img: "/grave-stone.png", title: "Black Marble Tombstone", category: "Tomb stone", location: "Independence Layout", date: "Feb 2026", desc: "Well designed and customized tomb stone." },
   { img: "/kitchen-wall.png", title: "Polished Granite Countertop", category: "KitchenTop", location: "New Haven", date: "Feb 2026", desc: "Glossy black granite with mirror finish." },
-  { img: "/podium.png", title: "Luxury Master Bathroom", category: "Podium", location: "Trans-Ekulu", date: "Jan 2026", desc: "well designed marble podium." },
-  { img: "/table.png", title: "White Marble Stair Hall", category: "Marble Table", location: "Achara Layout", date: "Jan 2026", desc: "dark marble table" },
-  { img: "/marble-slab.png", title: "Modern Kitchen Island", category: "Slab", location: "Uwani", date: "Dec 2025", desc: "Pure marble slab" },
+  { img: "/podium.png", title: " Marble Podium", category: "Podium", location: "Trans-Ekulu", date: "Jan 2026", desc: "well designed marble podium." },
+  { img: "/table.png", title: "Black Marble Table", category: "Marble Table", location: "Achara Layout", date: "Jan 2026", desc: "dark marble table" },
+  { img: "/marble-slab.png", title: "Modern black marble slab", category: "Slab", location: "Uwani", date: "Dec 2025", desc: "Pure marble slab" },
   
 ];
 
