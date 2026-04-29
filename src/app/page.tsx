@@ -7,7 +7,7 @@ import { WhyChooseUs } from "@/components/whychooseus";
 import { ContactCTA } from "@/components/contactCTA";
 export default function Home() {
   return (
-    <div >
+    <div className="">
       <Hero />
       <AboutSection />
       <ServicesGrid />

@@ -53,7 +53,7 @@ export function AboutSection() {
       <div key={i} className="w-1 h-1 bg-yellow-500 opacity-30 rounded-full"></div>
     ))}
   </div>
-    <div className="absolute bottom-40 -right-7 grid grid-cols-3 gap-2 ">
+    <div className="absolute bottom-40 hidden md:flex -right-7 grid grid-cols-3 gap-2 ">
     {Array.from({ length: 40 }).map((_, i) => (
       <div key={i} className="w-1 h-1 bg-yellow-500 opacity-30 rounded-full"></div>
     ))}
@@ -96,7 +96,7 @@ export function AboutSection() {
 
 </div>
 
-          <div className="absolute -bottom-5 -left-5 bg-yellow-500 text-primary-foreground w-25 rounded-2xl px-3 py-5 shadow-elegant">
+          <div className="absolute -bottom-5 -left-2 lg:-bottom-5 lg:-left-5  bg-yellow-500 text-primary-foreground w-25 rounded-2xl px-3 py-5 shadow-elegant">
             <div className="text-3xl font-bold font-display text-center leading-none">10+</div>
             <div className="text-xs mt-1 opacity-90 text-center leading-tight max-w-[100px]">Years of Experience</div>
           </div>
