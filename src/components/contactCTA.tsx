@@ -1,3 +1,4 @@
+'use client'
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, MessageCircle, ArrowRight } from "lucide-react";
 
@@ -17,8 +18,9 @@ export function ContactCTA() {
 
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }} className="grid gap-4">
           <div className="bg-white rounded-2xl p-6 shadow-card grid gap-4">
-            <Row icon={MapPin} title="Address" lines={["#72/73 Kenyetta Street, Uwani, Enugu"]} />
-            <Row icon={Phone} title="Phone" lines={["08154780100", "09050377975"]} />
+            <Row icon={MapPin} title="Addresses" lines={["72&73 Kenyetta Street, Uwani, Enugu"]} />
+            <Row icon={Phone} title="Phone Number" lines={["08154780100"]} />
+            <Row icon={Phone} title="Office Line" lines={[ "091600450421"]} />
             <Row icon={Mail} title="Email" lines={["info@bucheximpex.com"]} />
           </div>
           <div className="bg-white rounded-2xl p-6 shadow-card flex items-center justify-between gap-4">

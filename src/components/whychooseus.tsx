@@ -1,3 +1,4 @@
+'use client'
 import { motion } from "framer-motion";
 import { Gem, Shield, Hammer, Clock, Smile } from "lucide-react";
 

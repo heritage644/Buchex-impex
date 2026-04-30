@@ -1,4 +1,4 @@
-"use client"
+
 import { Hero } from "@/components/hero";
 import { AboutSection } from "@/components/aboutsection";
 import { ServicesGrid } from "@/components/serviceGrid";

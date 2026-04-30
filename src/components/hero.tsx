@@ -1,3 +1,4 @@
+'use client'
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { MessageCircle, ArrowRight, BadgeCheck } from "lucide-react";
